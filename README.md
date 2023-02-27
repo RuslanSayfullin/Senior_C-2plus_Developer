@@ -6,10 +6,11 @@
     python~=3.9
     Django~=4.1
     Celery~=5.2.7
+    pillow~=9.4.0
     PostgreSQL
 
 Скопируйте репозиторий с помощью команды:
-$ git clone https://github.com/RuslanSayfullin/reckoning.git
+$ git clone https://github.com/RuslanSayfullin/django_myshop.git
 Перейдите в основную директорию с помощью команды: 
 $ cd reckoning
 
@@ -37,9 +38,9 @@ $ sudo su - postgres
 Теперь запускаем командную оболочку PostgreSQL:
 $ psql 
 
-=# CREATE DATABASE reckoning;
+=# CREATE DATABASE django_myshop;
 =# CREATE USER portaluser WITH PASSWORD 'myPassword';
-=# GRANT ALL PRIVILEGES ON DATABASE reckoning TO portaluser;
+=# GRANT ALL PRIVILEGES ON DATABASE django_myshop TO portaluser;
 =# \q
 $ exit
 

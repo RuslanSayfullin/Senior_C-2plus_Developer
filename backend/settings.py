@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from backend.psw import secret_key      # импорт секретного ключа
 from .settings_db import DATABASES      # импорт данных для "базы данных"
@@ -26,7 +27,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'django.contrib.humanize',
 ] + [
-    'appmain.apps.AppmainConfig',
+    'shop.apps.ShopConfig',
 ]
 
 MIDDLEWARE = [
@@ -83,27 +84,26 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Yekaterinburg'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_L10N = True
+
+USE_TZ = False
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.1/howto/static-files/
-
+# "Поисковики" статики. Ищет статику в STATICFILES_DIRS.
 STATIC_URL = '/static/'    # URL для шаблонов
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',    # "Поисковики" статики. Ищет статику в STATICFILES_DIRS.
+    BASE_DIR / 'static',
 ]
 
+# Абсолютный путь в файловой системе, с каталогом, где файлы, загруженные пользователями.
 MEDIA_URL = '/media/'
-MEDIA_ROOT = [
-    BASE_DIR / 'media',    # Абсолютный путь в файловой системе, с каталогом, где файлы, загруженные пользователями.
-]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
