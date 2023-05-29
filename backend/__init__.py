@@ -1,1 +1,0 @@
-from .celeryfail import app as celery_app
