@@ -4,6 +4,6 @@
 ========================================================================================================================
 
 Скопируйте репозиторий с помощью команды:
-$ git clone https://github.com/RuslanSayfullin/pyqt6_book.git
+$ git clone https://github.com/RuslanSayfullin/Senior_C-2plus_Developer.git
 Перейдите в основную директорию с помощью команды: 
-$ cd pyqt6_examples
+$ cd Senior_C-2plus_Developer
