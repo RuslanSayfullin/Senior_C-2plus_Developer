@@ -1,7 +1,7 @@
-#include <iostram>
+#include <iostream>
 
 // Базовый класс
-class Base() {
+class Base {
 public:
     void publicMethod() {
         std::cout << "Вызван публичный метод базового класса" << std::endl;
